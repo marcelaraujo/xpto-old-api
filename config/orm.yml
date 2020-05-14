@@ -1,0 +1,49 @@
+# Mapeamentos
+mappings:
+    users:
+        type: annotation
+        namespace: Xpto\Entity\Users
+        resources_namespace: Xpto\Entity\Users
+        use_simple_annotation_reader: false
+
+    medias:
+        type: annotation
+        namespace: Xpto\Entity\Medias
+        resources_namespace: Xpto\Entity\Medias
+        use_simple_annotation_reader: false
+
+    connections:
+        type: annotation
+        namespace: Xpto\Entity\Connections
+        resources_namespace: Xpto\Entity\Connections
+        use_simple_annotation_reader: false
+
+    token:
+        type: annotation
+        namespace: Xpto\Entity\Login
+        resources_namespace: Xpto\Entity\Login
+        use_simple_annotation_reader: false
+
+    recommendations:
+        type: annotation
+        namespace: Xpto\Entity\Recommendations
+        resources_namespace: Xpto\Entity\Recommendations
+        use_simple_annotation_reader: false
+
+    inbox:
+        type: annotation
+        namespace: Xpto\Entity\Inbox
+        resources_namespace: Xpto\Entity\Inbox
+        use_simple_annotation_reader: false
+
+    queue:
+        type: annotation
+        namespace: Xpto\Entity\Queue
+        resources_namespace: Xpto\Entity\Queue
+        use_simple_annotation_reader: false
+
+    notification:
+        type: annotation
+        namespace: Xpto\Entity\Notifications
+        resources_namespace: Xpto\Entity\Notifications
+        use_simple_annotation_reader: false

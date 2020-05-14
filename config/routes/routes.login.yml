@@ -1,0 +1,5 @@
+# login route
+login.home:
+    path: /
+    defaults: { _controller: 'Xpto\Controller\Auth\Login::post' }
+    methods: [POST]

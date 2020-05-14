@@ -1,0 +1,61 @@
+# recommendation route
+recommendation.home:
+    path: /
+    defaults: { _controller: 'Xpto\Controller\Recommendations\Recommendation::get' }
+    methods: [GET]
+
+recommendation.view:
+    path: /{id}
+    defaults: { _controller: 'Xpto\Controller\Recommendations\Recommendation::view' }
+    methods: [GET]
+    requirements:
+      id: \d+
+
+recommendation.create:
+    path: /{id}
+    defaults: { _controller: 'Xpto\Controller\Recommendations\Recommendation::create' }
+    methods: [POST]
+    requirements:
+      id: \d+
+
+recommendation.approve:
+    path: /approve/{id}
+    defaults: { _controller: 'Xpto\Controller\Recommendations\Recommendation::approve' }
+    methods: [PUT]
+    requirements:
+      id: \d+
+
+recommendation.decline:
+    path: /decline/{id}
+    defaults: { _controller: 'Xpto\Controller\Recommendations\Recommendation::decline' }
+    methods: [PUT]
+    requirements:
+      id: \d+
+
+recommendation.modify:
+    path: /{id}
+    defaults: { _controller: 'Xpto\Controller\Recommendations\Recommendation::update' }
+    methods: [PUT]
+    requirements:
+      id: \d+
+
+recommendation.delete:
+    path: /{id}
+    defaults: { _controller: 'Xpto\Controller\Recommendations\Recommendation::delete' }
+    methods: [DELETE]
+    requirements:
+      id: \d+
+
+recommendation.view-by-user-id:
+    path: /public/{id}
+    defaults: { _controller: 'Xpto\Controller\Recommendations\Recommendation::viewAllByUserId' }
+    methods: [GET]
+    requirements:
+      id: \d+
+
+recommendation.view-by-user-nickname:
+    path: /public/{nickname}
+    defaults: { _controller: 'Xpto\Controller\Recommendations\Recommendation::viewAllByNickname' }
+    methods: [GET]
+    requirements:
+      nickname: \w+

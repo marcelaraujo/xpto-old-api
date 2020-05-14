@@ -1,0 +1,5 @@
+# logout route
+logout.home:
+    path: /
+    defaults: { _controller: 'Xpto\Controller\Auth\Logout::delete' }
+    methods: [DELETE]

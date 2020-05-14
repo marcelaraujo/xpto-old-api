@@ -1,0 +1,19 @@
+# Trusteeship route
+trusteedship.home:
+    path: /
+    defaults: { _controller: 'Xpto\Controller\Trusteeship\Trusteeship::get' }
+    methods: [GET]
+
+trusteedship.approve:
+    path: /approve/{id}
+    defaults: { _controller: 'Xpto\Controller\Trusteeship\Trusteeship::approve' }
+    methods: [PUT]
+    requirements:
+      id: \d+
+
+trusteedship.decline:
+    path: /decline/{id}
+    defaults: { _controller: 'Xpto\Controller\Trusteeship\Trusteeship::decline' }
+    methods: [PUT]
+    requirements:
+      id: \d+

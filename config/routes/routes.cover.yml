@@ -1,0 +1,5 @@
+# cover route
+cover.home:
+    path: /
+    defaults: { _controller: 'Xpto\Controller\Medias\Album\Cover::get' }
+    methods: [GET]

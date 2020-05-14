@@ -1,0 +1,12 @@
+# notification route
+notification.home:
+    path: /
+    defaults: { _controller: 'Xpto\Controller\Notifications\Notification::get' }
+    methods: [GET]
+
+notification.view:
+    path: /{id}
+    defaults: { _controller: 'Xpto\Controller\Notifications\Notification::view' }
+    methods: [GET]
+    requirements:
+      id: \d+

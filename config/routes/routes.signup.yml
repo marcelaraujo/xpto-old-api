@@ -1,0 +1,5 @@
+# signup route
+signup.create:
+    path: /
+    defaults: { _controller: 'Xpto\Controller\Signup\Signup::create' }
+    methods: [POST]

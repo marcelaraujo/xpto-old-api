@@ -1,0 +1,104 @@
+# album route
+album.home:
+    path: /
+    defaults: { _controller: 'Xpto\Controller\Medias\Album::get' }
+    methods: [GET]
+
+album.view:
+    path: /{id}
+    defaults: { _controller: 'Xpto\Controller\Medias\Album::view' }
+    methods: [GET]
+    requirements:
+      id: \d+
+
+album.create:
+    path: /
+    defaults: { _controller: 'Xpto\Controller\Medias\Album::post' }
+    methods: [POST]
+
+album.modify:
+    path: /{id}
+    defaults: { _controller: 'Xpto\Controller\Medias\Album::put' }
+    methods: [PUT]
+    requirements:
+      id: \d+
+
+album.delete:
+    path: /{id}
+    defaults: { _controller: 'Xpto\Controller\Medias\Album::delete' }
+    methods: [DELETE]
+    requirements:
+      id: \d+
+
+album.add-media:
+    path: /{id}
+    defaults: { _controller: 'Xpto\Controller\Medias\Album\Media::post' }
+    methods: [POST]
+    requirements:
+      id: \d+
+
+album.delete-media:
+    path: /{albumId}/{mediaId}
+    defaults: { _controller: 'Xpto\Controller\Medias\Album\Media::delete' }
+    methods: [DELETE]
+    requirements:
+      albumId: \d+
+      mediaId: \d+
+
+album.like-list:
+    path: /{albumId}/like
+    defaults: { _controller: 'Xpto\Controller\Medias\Album\Like::get' }
+    methods: [GET]
+    requirements:
+      albumId: \d+
+
+album.like-add:
+    path: /{albumId}/like
+    defaults: { _controller: 'Xpto\Controller\Medias\Album\Like::post' }
+    methods: [POST]
+    requirements:
+      albumId: \d+
+
+album.like-delete:
+    path: /{albumId}/like/{likeId}
+    defaults: { _controller: 'Xpto\Controller\Medias\Album\Like::delete' }
+    methods: [DELETE]
+    requirements:
+      albumId: \d+
+      likeId: \d+
+
+album.comment-list:
+    path: /{albumId}/comment
+    defaults: { _controller: 'Xpto\Controller\Medias\Album\Comment::get' }
+    methods: [GET]
+    requirements:
+      albumId: \d+
+
+album.comment-add:
+    path: /{albumId}/comment
+    defaults: { _controller: 'Xpto\Controller\Medias\Album\Comment::post' }
+    methods: [POST]
+    requirements:
+      albumId: \d+
+
+album.comment-delete:
+    path: /{albumId}/comment/{commentId}
+    defaults: { _controller: 'Xpto\Controller\Medias\Album\Comment::delete' }
+    methods: [DELETE]
+    requirements:
+      albumId: \d+
+      commentId: \d+
+
+album.view-public-by-user-id:
+    path: /public/{id}
+    defaults: { _controller: 'Xpto\Controller\Medias\Album::viewAllByUserId' }
+    methods: [GET]
+    requirements:
+      id: \d+
+
+album.view-public-by-nickname:
+    path: /public/{nickname}
+    defaults: { _controller: 'Xpto\Controller\Medias\Album::viewAllByNickname' }
+    methods: [GET]
+    requirements:
+      nickname: \w+

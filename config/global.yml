@@ -1,0 +1,8 @@
+# Global config - DON'T TOUCH
+application:
+    version: 0.1.0
+    name: Xpto App
+    path: ./
+
+twig:
+    twig.path: view

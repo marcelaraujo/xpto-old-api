@@ -1,0 +1,52 @@
+# Base de dados
+database:
+    driver: pdo_mysql
+    host: 127.0.0.1
+    dbname: xpto
+    user: root
+    password:
+
+# emails de contato
+email:
+    config:
+        host: localhost
+        port: 25
+        username:
+        password:
+        encryption:
+        auth_mode:
+
+# configurações do log
+log:
+    default:
+        name: Default
+        logfile: data/tmp/api.log
+        permission: 0644
+        level: INFO
+
+    doctrine:
+        name: Doctrine
+        logfile: data/tmp/doctrine.log
+        permission: 0644
+        level: DEBUG
+
+# Cloudinary Image Storage
+cloudinary:
+    cloud_name: sample
+    api_key: 
+    api_secret: 
+    
+# YouTube Data API v3
+youtube:
+    api_key: 
+
+# Vimeo
+vimeo:
+    client_id: 
+    client_secret: 
+    access_token: 
+    
+# Soundcloud
+soundcloud:
+    client_id: 
+    client_secret: 

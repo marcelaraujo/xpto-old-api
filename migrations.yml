@@ -1,0 +1,4 @@
+name: Xpto Migrations
+migrations_namespace: Migrations
+table_name: migrations
+migrations_directory: src/Migrations

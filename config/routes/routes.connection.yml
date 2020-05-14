@@ -1,0 +1,59 @@
+# connection route
+connection.home:
+    path: /
+    defaults: { _controller: 'Xpto\Controller\Connections\Connection::get' }
+    methods: [GET]
+
+connection.view.public.id:
+    path: /public/{id}
+    defaults: { _controller: 'Xpto\Controller\Connections\Connection::viewAllById' }
+    methods: [GET]
+    requirements:
+      id: \d+
+
+connection.view.public.nick:
+    path: /public/{nickname}
+    defaults: { _controller: 'Xpto\Controller\Connections\Connection::viewAllByNickname' }
+    methods: [GET]
+    requirements:
+      nickname: \w+
+
+connection.view.id:
+    path: /{id}
+    defaults: { _controller: 'Xpto\Controller\Connections\Connection::viewById' }
+    methods: [GET]
+    requirements:
+      id: \d+
+
+connection.view.nick:
+    path: /{nickname}
+    defaults: { _controller: 'Xpto\Controller\Connections\Connection::viewByNickname' }
+    methods: [GET]
+    requirements:
+      nickname: \w+
+
+connection.create:
+    path: /
+    defaults: { _controller: 'Xpto\Controller\Connections\Connection::post' }
+    methods: [POST]
+
+connection.modify:
+    path: /{id}
+    defaults: { _controller: 'Xpto\Controller\Connections\Connection::put' }
+    methods: [PUT]
+    requirements:
+      id: \d+
+
+connection.approve:
+    path: /approve/{id}
+    defaults: { _controller: 'Xpto\Controller\Connections\Connection::approve' }
+    methods: [PUT]
+    requirements:
+      id: \d+
+
+connection.decline:
+    path: /approve/{id}
+    defaults: { _controller: 'Xpto\Controller\Connections\Connection::decline' }
+    methods: [PUT]
+    requirements:
+      id: \d+

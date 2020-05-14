@@ -1,0 +1,21 @@
+# search route
+search.name:
+    path: /name/{name}
+    defaults: { _controller: 'Xpto\Controller\Search\Search::name' }
+    methods: [GET]
+    requirements:
+      name: \w+
+
+search.bio:
+    path: /bio/{bio}
+    defaults: { _controller: 'Xpto\Controller\Search\Search::bio' }
+    methods: [GET]
+    requirements:
+      bio: \w+
+
+search.location:
+    path: /location/{location}
+    defaults: { _controller: 'Xpto\Controller\Search\Search::location' }
+    methods: [GET]
+    requirements:
+      location: \w+

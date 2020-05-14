@@ -1,0 +1,107 @@
+# media route
+media.home:
+    path: /
+    defaults: { _controller: 'Xpto\Controller\Medias\Media::get' }
+    methods: [GET]
+
+media.view:
+    path: /{id}
+    defaults: { _controller: 'Xpto\Controller\Medias\Media::view' }
+    methods: [GET]
+
+media.post:
+    path: /
+    defaults: { _controller: 'Xpto\Controller\Medias\Media::post' }
+    methods: [POST]
+
+media.image:
+    path: /image/
+    defaults: { _controller: 'Xpto\Controller\Medias\Media\Image::post' }
+    methods: [POST]
+
+media.youtube:
+    path: /youtube/
+    defaults: { _controller: 'Xpto\Controller\Medias\Media\Youtube::post' }
+    methods: [POST]
+
+media.vimeo:
+    path: /vimeo/
+    defaults: { _controller: 'Xpto\Controller\Medias\Media\Vimeo::post' }
+    methods: [POST]
+
+media.soundcloud:
+    path: /soundcloud/
+    defaults: { _controller: 'Xpto\Controller\Medias\Media\Soundcloud::post' }
+    methods: [POST]
+
+media.put:
+    path: /{id}
+    defaults: { _controller: 'Xpto\Controller\Medias\Media::put' }
+    methods: [PUT]
+    requirements:
+      id: \d+
+
+media.delete:
+    path: /{id}
+    defaults: { _controller: 'Xpto\Controller\Medias\Media::delete' }
+    methods: [DELETE]
+    requirements:
+      id: \d+
+
+media.like-list:
+    path: /{mediaId}/like
+    defaults: { _controller: 'Xpto\Controller\Medias\Media\Like::get' }
+    methods: [GET]
+    requirements:
+      mediaId: \d+
+
+media.like-add:
+    path: /{mediaId}/like
+    defaults: { _controller: 'Xpto\Controller\Medias\Media\Like::post' }
+    methods: [POST]
+    requirements:
+      mediaId: \d+
+
+media.like-delete:
+    path: /{mediaId}/like/{likeId}
+    defaults: { _controller: 'Xpto\Controller\Medias\Media\Like::delete' }
+    methods: [DELETE]
+    requirements:
+      mediaId: \d+
+      likeId: \d+
+
+media.comment-list:
+    path: /{mediaId}/comment
+    defaults: { _controller: 'Xpto\Controller\Medias\Media\Comment::get' }
+    methods: [GET]
+    requirements:
+      mediaId: \d+
+
+media.comment-add:
+    path: /{mediaId}/comment
+    defaults: { _controller: 'Xpto\Controller\Medias\Media\Comment::post' }
+    methods: [POST]
+    requirements:
+      mediaId: \d+
+
+media.comment-delete:
+    path: /{mediaId}/comment/{commentId}
+    defaults: { _controller: 'Xpto\Controller\Medias\Media\Comment::delete' }
+    methods: [DELETE]
+    requirements:
+      mediaId: \d+
+      commentId: \d+
+
+media.view-public-by-user-id:
+    path: /public/{id}
+    defaults: { _controller: 'Xpto\Controller\Medias\Media::viewAllByUserId' }
+    methods: [GET]
+    requirements:
+      id: \d+
+
+media.view-public-by-nickname:
+    path: /public/{nickname}
+    defaults: { _controller: 'Xpto\Controller\Medias\Media::viewAllByNickname' }
+    methods: [GET]
+    requirements:
+      nickname: \w+

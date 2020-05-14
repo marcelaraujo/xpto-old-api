@@ -1,0 +1,29 @@
+# user route
+user.home:
+    path: /
+    defaults: { _controller: 'Xpto\Controller\Users\User::get' }
+    methods: [GET]
+
+user.viewId:
+    path: /{id}
+    defaults: { _controller: 'Xpto\Controller\Users\User::viewById' }
+    methods: [GET]
+    requirements:
+      id: \d+
+
+user.viewNick:
+    path: /{nickname}
+    defaults: { _controller: 'Xpto\Controller\Users\User::viewByNickname' }
+    methods: [GET]
+    requirements:
+      nickname: \w+
+
+user.update:
+    path: /
+    defaults: { _controller: 'Xpto\Controller\Users\User::update' }
+    methods: [PUT]
+
+user.delete:
+    path: /
+    defaults: { _controller: 'Xpto\Controller\Users\User::delete' }
+    methods: [DELETE]

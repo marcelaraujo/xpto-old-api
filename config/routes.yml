@@ -1,0 +1,62 @@
+# config/routes.yml
+
+home:
+    path: /
+    defaults: { _controller: 'Xpto\Controller\Index::get' }
+    methods: [GET]
+
+album:
+    prefix: /album
+    resource: routes/routes.album.yml
+
+avatar:
+    prefix: /avatar
+    resource: routes/routes.avatar.yml
+
+connection:
+    prefix: /connection
+    resource: routes/routes.connection.yml
+
+cover:
+    prefix: /cover
+    resource: routes/routes.cover.yml
+
+inbox:
+    prefix: /inbox
+    resource: routes/routes.inbox.yml
+
+login:
+    prefix: /login
+    resource: routes/routes.login.yml
+
+logout:
+    prefix: /logout
+    resource: routes/routes.logout.yml
+
+media:
+    prefix: /media
+    resource: routes/routes.media.yml
+
+recommendation:
+    prefix: /recommendation
+    resource: routes/routes.recommendation.yml
+
+search:
+    prefix: /search
+    resource: routes/routes.search.yml
+
+trusteeship:
+    prefix: /trusteeship
+    resource: routes/routes.trusteeship.yml
+
+user:
+    prefix: /user
+    resource: routes/routes.user.yml
+
+signup:
+    prefix: /signup
+    resource: routes/routes.signup.yml
+
+notification:
+    prefix: /notification
+    resource: routes/routes.notification.yml

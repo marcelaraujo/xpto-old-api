@@ -1,0 +1,5 @@
+# avatar route
+avatar.create:
+    path: /
+    defaults: { _controller: 'Xpto\Controller\Medias\Media\Avatar::post' }
+    methods: [POST]

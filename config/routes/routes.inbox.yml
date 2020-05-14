@@ -1,0 +1,31 @@
+# inbox route
+inbox.home:
+    path: /
+    defaults: { _controller: 'Xpto\Controller\Inbox\Inbox::get' }
+    methods: [GET]
+
+inbox.view:
+    path: /{id}
+    defaults: { _controller: 'Xpto\Controller\Inbox\Inbox::view' }
+    methods: [GET]
+    requirements:
+      id: \d+
+
+inbox.create:
+    path: /
+    defaults: { _controller: 'Xpto\Controller\Inbox\Inbox::post' }
+    methods: [POST]
+
+inbox.delete:
+    path: /{id}
+    defaults: { _controller: 'Xpto\Controller\Inbox\Inbox::delete' }
+    methods: [DELETE]
+    requirements:
+      id: \d+
+
+inbox.archive:
+    path: /archive/{id}
+    defaults: { _controller: 'Xpto\Controller\Inbox\Inbox::archive' }
+    methods: [POST]
+    requirements:
+      id: \d+
